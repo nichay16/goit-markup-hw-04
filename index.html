@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio</title>
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- ! site header-->
+    <header class="header">
+    <div class="conteiner">
+        <!--main site navigation-->
+        <nav class="navigation">
+            <!--the logo-->
+            <a class="logo" href="./index.html">Web<samp class="logo-text-dark">Studio</samp></a>
+            <!--menu-->
+            <ul class="site-nav">
+                <li class="site-nav-item"><a class="site-nav-link current" href="#">Студия</a></li>
+                <li class="site-nav-item"><a class="site-nav-link" href="./portfolio.html">Портфолио</a></li>
+                <li class="site-nav-item"><a class="site-nav-link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <!-- header address, contact-->
+        <address class="header-address">
+            <a class="header-contact-email" href="mailto:info@example.com">info@example.com</a>
+            <a class="header-contact-tell" href="tel:+380991111111">+38 099 111 11 11</a>
+        </address>
+    </div>
+    </header>
+    <!--! unique page content-->
+    <main>
+        <!--SECTION HEROES -->
+        <section class="hero overlay">
+            <div class="conteiner">
+                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+                <!-- BUTTON -->
+                <button class="button">Заказать услугу</button>
+            </div>
+        </section>
+        <!--SECTION Features-->
+        <section class="section-features">
+            <div class="conteiner">
+                <h2 class="section-title-features visually-hidden">Особенности</h2> <!-- ! I will hide -->
+                <ul class="subtitle-features">
+                    <li class="subtitle-item-features">
+                        <h3 class="title-features">Внимание к деталям</h3>
+                        <p class="text-features">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                    </li>
+                    <li class="subtitle-item-features">
+                        <h3 class="title-features">Пунктуальность</h3>
+                        <p class="text-features">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                    </li>
+                    <li class="subtitle-item-features">
+                        <h3 class="title-features">Планирование</h3>
+                        <p class="text-features">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                    </li>
+                    <li class="subtitle-item-features">
+                        <h3 class="title-features">Современные технологии</h3>
+                        <p class="text-features">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--SECTION What are we doing?-->
+        <section class="section-work">
+            <div class="conteiner">
+                <h2 class="section-title-work">Чем мы занимаемся</h2>
+                <ul class="subtitle-work">
+                    <li class="subtitle-item-work">
+                        <a href="#">
+                            <img class="subtitle-img-work" src="./img/studio/1.jpg" alt="компьютер на столе" width="370" height="294">
+                        </a>
+                    </li>
+
+                    <li class="subtitle-item-work">
+                        <a href="#">
+                            <img class="subtitle-img-work" src="./img/studio/2.jpg" alt="телефон на столе" width="370" height="294">
+                        </a>
+                    </li>
+                    <li class="subtitle-item-work">
+                        <a href="#">
+                            <img class="subtitle-img-work" src="./img/studio/3.jpg" alt="планцен на столе" width="370" height="294">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--SECTION Our team-->
+        <section class="section-team">
+            <div class="conteiner">
+                <h2 class="section-title-team">Наша команда</h2>
+                <ul class="subtitle-team">
+
+                    <li class="subtitle-item-team">
+                        <article class="card-team">
+                            <div class="card-thumb-team">
+                                <img class="subtitle-img-team" src="./img/studio/PD.jpg" alt="Игорь Демьяненко">
+                            </div>
+                            <div class="card-content-team">
+                                <h3 class="title-team">Игорь Демьяненко</h3>
+                                <p class="text-team">Product Designer</p>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="subtitle-item-team">
+                        <article class="card-team">
+                            <div class="card-thumb-team">
+                                <img class="subtitle-img-team" src="./img/studio/FD.jpg" alt="Ольга Репина">
+                            </div>
+
+                            <div class="card-content-team">
+                                <h3 class="title-team">Ольга Репина</h3>
+                                <p class="text-team">Frontend Developer</p>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="subtitle-item-team">
+                        <article class="card-team">
+                            <div class="card-thumb-team">
+                                <img class="subtitle-img-team" src="./img/studio/M.jpg" alt="Николай Тарасов">
+                            </div>
+
+                            <div class="card-content-team">
+                                <h3 class="title-team">Николай Тарасов</h3>
+                                <p class="text-team">Marketing</p>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="subtitle-item-team">
+                        <article class="card-team">
+                            <div class="card-thumb-team">
+                                <img class="subtitle-img-team" src="./img/studio/UID.jpg" alt="Михаил Ермаков">
+                            </div>
+
+                            <div class="card-content-team">
+                                <h3 class="title-team">Михаил Ермаков</h3>
+                                <p class="text-team">UI Designer</p>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!--! footer site-->
+    <footer class="footer">
+        <div class="conteiner">
+            <!--the logo-->
+            <a class="logo" href="./index.html">Web<samp class="logo-text-light">Studio</samp></a>
+            </a>
+            <!--address, contact-->
+            <address class="footer-address">
+                <a class="footer-contact-address" href="https://goo.gl/maps/rmMPoWMHuQChFa8u6" class="map">г. Киев, пр-т Леси Украинки, 26</a>
+                <a class="footer-contact-email" href="mailto:info@example.com">info@example.com</a>
+                <a class="footer-contact-tell" href="tel:+380991111111">+38 099 111 11 11</a>
+            </address>
+        </div>
+    </footer>
+
+</body>
+</html>
