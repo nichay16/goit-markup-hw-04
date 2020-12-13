@@ -15,160 +15,232 @@
 </head>
 
 <body>
-    <!-- ! site header-->
+    <!-- ! HEADER website // ШАПКА веб-сайта-->
     <header class="header">
-    <div class="conteiner">
-        <!--main site navigation-->
-        <nav class="navigation">
-            <!--the logo-->
-            <a class="logo" href="./index.html">Web<samp class="logo-text-dark">Studio</samp></a>
-            <!--menu-->
-            <ul class="site-nav">
-                <li class="site-nav-item"><a class="site-nav-link current" href="#">Студия</a></li>
-                <li class="site-nav-item"><a class="site-nav-link" href="./portfolio.html">Портфолио</a></li>
-                <li class="site-nav-item"><a class="site-nav-link" href="#">Контакты</a></li>
-            </ul>
-        </nav>
-        <!-- header address, contact-->
-        <address class="header-address">
-            <a class="header-contact-email" href="mailto:info@example.com">info@example.com</a>
-            <a class="header-contact-tell" href="tel:+380991111111">+38 099 111 11 11</a>
-        </address>
-    </div>
+
+        <div class="conteiner">
+
+            <nav class="navigation">
+
+                <!--LOGO // логотип-->
+                <a class="logo" href="./index.html">Web<samp class="logo-text__dark">Studio</samp></a>
+
+                <!--MENU // меню-->
+                <ul class="site-nav">
+                    <li class="site-nav__item"><a class="site-nav__link current" href="#">Студия</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
+                </ul>
+
+            </nav>
+            
+            <!-- Header address. Contact // адрес и контакты в шапке веб-сайта-->
+            <address class="header-address">
+                <a class="header-contact__email icon-email" href="mailto:info@example.com">
+                    <!-- <svg class="contacts__icon contacts__icon--envelope">
+                        <use href='./img/sprait/symbol-defs.svg#icon-envelope'></use>
+                    </svg> -->
+                    info@example.com</a>
+                <a class="header-contact__tell" href="tel:+380991111111">
+                    <!-- <svg class="contacts__icon contacts__icon--phone">
+                        <use href='./img/sprait/symbol-defs.svg#icon-phone'></use>
+                    </svg> -->
+                    +38 099 111 11 11</a>
+            </address>
+
+        </div>
+
     </header>
-    <!--! unique page content-->
+    <!--! Unique page content // уникальный контент страницы-->
     <main>
-        <!--SECTION HEROES -->
-        <section class="hero overlay">
+
+        <!--SECTION HEROES // секция герои -->
+        <section class="hero">
+
             <div class="conteiner">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <!-- BUTTON -->
-                <button class="button">Заказать услугу</button>
+                <button class="hero-button">Заказать услугу</button>
             </div>
+
         </section>
+
         <!--SECTION Features-->
         <section class="section-features">
+
             <div class="conteiner">
-                <h2 class="section-title-features visually-hidden">Особенности</h2> <!-- ! I will hide -->
+
+                <h2 class="section-features__title visually-hidden">Особенности</h2> <!-- ! I will hide -->
+
                 <ul class="subtitle-features">
-                    <li class="subtitle-item-features">
+
+                    <li class="subtitle-features__item icon-antenna">
                         <h3 class="title-features">Внимание к деталям</h3>
                         <p class="text-features">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
-                    <li class="subtitle-item-features">
+
+                    <li class="subtitle-features__item icon-clock">
                         <h3 class="title-features">Пунктуальность</h3>
                         <p class="text-features">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                     </li>
-                    <li class="subtitle-item-features">
+
+                    <li class="subtitle-features__item icon-diagram">
                         <h3 class="title-features">Планирование</h3>
                         <p class="text-features">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                     </li>
-                    <li class="subtitle-item-features">
+
+                    <li class="subtitle-features__item icon-astronaut">
                         <h3 class="title-features">Современные технологии</h3>
                         <p class="text-features">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                     </li>
+
                 </ul>
+
             </div>
+
         </section>
+
         <!--SECTION What are we doing?-->
         <section class="section-work">
+
             <div class="conteiner">
-                <h2 class="section-title-work">Чем мы занимаемся</h2>
+
+                <h2 class="section-work__title">Чем мы занимаемся</h2>
+
                 <ul class="subtitle-work">
-                    <li class="subtitle-item-work">
+
+                    <li class="subtitle-work__item">
                         <a href="#">
-                            <img class="subtitle-img-work" src="./img/studio/1.jpg" alt="компьютер на столе" width="370" height="294">
+                            <img class="subtitle-work__img" src="./img/studio/1.jpg" alt="компьютер на столе" width="370" height="294">
                         </a>
                     </li>
 
-                    <li class="subtitle-item-work">
+                    <li class="subtitle-work__item">
                         <a href="#">
-                            <img class="subtitle-img-work" src="./img/studio/2.jpg" alt="телефон на столе" width="370" height="294">
+                            <img class="subtitle-work__img" src="./img/studio/2.jpg" alt="телефон на столе" width="370" height="294">
                         </a>
                     </li>
-                    <li class="subtitle-item-work">
+
+                    <li class="subtitle-work__item">
                         <a href="#">
-                            <img class="subtitle-img-work" src="./img/studio/3.jpg" alt="планцен на столе" width="370" height="294">
+                            <img class="subtitle-work__img" src="./img/studio/3.jpg" alt="планцен на столе" width="370" height="294">
                         </a>
                     </li>
+
                 </ul>
+
             </div>
+
         </section>
+
         <!--SECTION Our team-->
         <section class="section-team">
+
             <div class="conteiner">
-                <h2 class="section-title-team">Наша команда</h2>
+
+                <h2 class="section-team__title">Наша команда</h2>
+
                 <ul class="subtitle-team">
 
-                    <li class="subtitle-item-team">
+                    <li class="subtitle-team__item">
                         <article class="card-team">
-                            <div class="card-thumb-team">
-                                <img class="subtitle-img-team" src="./img/studio/PD.jpg" alt="Игорь Демьяненко">
+
+                            <div class="card-team__thumb">
+                                <img class="subtitle-team__img" src="./img/studio/PD.jpg" alt="Игорь Демьяненко">
                             </div>
-                            <div class="card-content-team">
+
+                            <div class="card-team__content">
                                 <h3 class="title-team">Игорь Демьяненко</h3>
-                                <p class="text-team">Product Designer</p>
+                                <p class="text-team"><span lang="en">Product Designer</span></p>
                             </div>
+
                         </article>
                     </li>
 
-                    <li class="subtitle-item-team">
+                    <li class="subtitle-team__item">
                         <article class="card-team">
-                            <div class="card-thumb-team">
-                                <img class="subtitle-img-team" src="./img/studio/FD.jpg" alt="Ольга Репина">
+
+                            <div class="card-team__thumb">
+                                <img class="subtitle-team__img" src="./img/studio/FD.jpg" alt="Ольга Репина">
                             </div>
 
-                            <div class="card-content-team">
+                            <div class="card-team__content">
                                 <h3 class="title-team">Ольга Репина</h3>
-                                <p class="text-team">Frontend Developer</p>
+                                <p class="text-team"><span lang="en">Frontend Developer</span></p>
                             </div>
+
                         </article>
                     </li>
 
-                    <li class="subtitle-item-team">
+                    <li class="subtitle-team__item">
                         <article class="card-team">
-                            <div class="card-thumb-team">
-                                <img class="subtitle-img-team" src="./img/studio/M.jpg" alt="Николай Тарасов">
+
+                            <div class="card-team__thumb">
+                                <img class="subtitle-team__img" src="./img/studio/M.jpg" alt="Николай Тарасов">
                             </div>
 
-                            <div class="card-content-team">
+                            <div class="card-team__content">
                                 <h3 class="title-team">Николай Тарасов</h3>
-                                <p class="text-team">Marketing</p>
+                                <p class="text-team"><span lang="en">Marketing</span></p>
                             </div>
+
                         </article>
                     </li>
 
-                    <li class="subtitle-item-team">
+                    <li class="subtitle-team__item">
                         <article class="card-team">
-                            <div class="card-thumb-team">
-                                <img class="subtitle-img-team" src="./img/studio/UID.jpg" alt="Михаил Ермаков">
+
+                            <div class="card-team__thumb">
+                                <img class="subtitle-team__img" src="./img/studio/UID.jpg" alt="Михаил Ермаков">
                             </div>
 
-                            <div class="card-content-team">
+                            <div class="card-team__content">
                                 <h3 class="title-team">Михаил Ермаков</h3>
-                                <p class="text-team">UI Designer</p>
+                                <p class="text-team"><span lang="en">UI Designer</span></p>
                             </div>
+
                         </article>
                     </li>
 
                 </ul>
+
             </div>
+
         </section>
+
     </main>
 
     <!--! footer site-->
     <footer class="footer">
+
         <div class="conteiner">
+
             <!--the logo-->
-            <a class="logo" href="./index.html">Web<samp class="logo-text-light">Studio</samp></a>
-            </a>
-            <!--address, contact-->
-            <address class="footer-address">
-                <a class="footer-contact-address" href="https://goo.gl/maps/rmMPoWMHuQChFa8u6" class="map">г. Киев, пр-т Леси Украинки, 26</a>
-                <a class="footer-contact-email" href="mailto:info@example.com">info@example.com</a>
-                <a class="footer-contact-tell" href="tel:+380991111111">+38 099 111 11 11</a>
-            </address>
+            <ul class="subtitle-footer">
+
+                <li class="subtitle-footer__item">
+                    <a class="logo" href="./index.html">Web<samp class="logo-text-light">Studio</samp></a>
+
+                    <!--address, contact-->
+                    <address class="footer-address">
+
+                        <a class="footer-address__contact" href="https://goo.gl/maps/rmMPoWMHuQChFa8u6" class="map">г. Киев, пр-т Леси Украинки, 26</a>
+
+                        <a class="footer-contact__email" href="mailto:info@example.com">info@example.com</a>
+
+                        <a class="footer-contact__tell" href="tel:+380991111111">+38 099 111 11 11</a>
+                    </address>
+
+                </li>
+
+                <li class="subtitle-footer__item">
+                    <b class="subscription">присоединяйтесь</b>
+                </li>
+
+            </ul>  
+           
         </div>
+
     </footer>
 
 </body>
