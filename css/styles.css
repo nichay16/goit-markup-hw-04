@@ -9,7 +9,11 @@
     --background-color-white: #FFFFFF;
     --secondary-background-color: #F5F4FA;
     --portfolio-button-background-color: #F5F4FA;
+    --primary-font-family: "Roboto", sans-serif;
+    --secondary-font-family: "Raleway", sans-serif;
     --card-set-gap: 30px;
+    --socials-color: #afb1b8;
+    --socials-color-background-dark: rgba(255, 255, 255, 0.1);
     --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
@@ -52,10 +56,9 @@ a {
 /* fonts constants // константы шрифтов*/
 body,
 address {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font-family);
     font-style: normal;
     letter-spacing: 0.03em;
-    align-items: center;
 
     color: var(--primary-text-color);
     background-color: var(--background-color-white);
@@ -90,8 +93,8 @@ h6 {
     color: var(--accent-color);
 }
 
-.portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
     box-shadow: 
@@ -143,6 +146,7 @@ button {
 .header .conteiner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navigation {
@@ -207,63 +211,21 @@ button {
 /* !Header address. Contact // адрес и контакты в шапке веб-сайта */
 /** ----------------------------------------- */
 
-.header-address {
-    display: inline-flex;
+.header-contact {
+    display: flex;
     align-items: center;
     margin-left: auto;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.143; 
 }
 
-.header-contact__link {
-    display: inline-flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px; 
-    color: var(--primary-text-color);
+.header-contact__item:not(:last-child) {
+    margin-right: 50px;
 }
 
-.header-contact__email {
-    margin-right: 30px;
-}
-
-.header-contact__email::before{
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: red;
-}
-}
-
-.icon-email::before {
-    <svg>
-        <use href='../img/sprait/symbol-defs.svg#icon-envelope'></use>
-    </svg>
-}
-
-/* .header-contact__link:first-of-type + .header-contact__link {
-    margin-left: 30px;
-} */
-
-/* .contacts__icon {
+.icon-envelope,
+.icon-phone {
     margin-right: 10px;
     fill: currentColor;
 }
-
-.contacts__icon--envelope {
-    width: 16px;
-    height: 12px;
-}
-
-.contacts__icon--phone {
-    width: 10px;
-    height: 16px;
-} */
 
 /** ----------------------------------------- */
 
@@ -274,9 +236,6 @@ button {
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.364;
     padding: 200px 0;
 
     background-color: var(--background-color-dark);
@@ -290,6 +249,7 @@ button {
 
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .hero .conteiner {
@@ -334,6 +294,7 @@ button {
 /** ----------------------------------------- */
 
 /* ! SECTION Features // секция особенности */
+/** ----------------------------------------- */
 
 .section-features {
     padding-top: 94px;
@@ -397,7 +358,11 @@ button {
     color: var(--primary-text-color);
 }
 
-/* *============================SECTION WORK===================== */
+/** ----------------------------------------- */
+
+/*! SECTION Activities // Направления деятельности */
+/** ----------------------------------------- */
+
 .section-work {
     padding-bottom: 94px;
 }
@@ -408,22 +373,44 @@ button {
     flex-direction: column; 
 }
 
-.section-title-work {
-    color: var(--title-text-color);
-    text-align: center;
-
-    margin-bottom: 50px;
-}
-
 .subtitle-work {
     display: flex;
 }
 
-.subtitle-item-work:not(:last-child) {
+.section-work__title {
+    color: var(--title-text-color);
+    margin-bottom: 50px;
+}
+
+.subtitle-work__img {
+    display: flex;
+}
+
+.subtitle-work__item {
+    width: calc((100% - 60px) / 3);
+}
+
+.subtitle-work__item:not(:last-child) {
     margin-right: 30px;
 }
 
-/* *=========================SECTION TEAM======================= */
+.subtitle-work__label {
+    color: var(--background-color-white);
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/** ----------------------------------------- */
+
+/* ! SECTION team // Команда */
+/** ----------------------------------------- */
 
 .section-team {
     background-color: var(--secondary-background-color);
@@ -437,6 +424,15 @@ button {
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+.section-team__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.67;
+    color: var(--title-text-color);
+}
+
 
 .section-title__team {
     font-weight: 700;
@@ -456,7 +452,7 @@ button {
     margin-top: calc(-1 * var(--card-set-gap));
 }
 
-.subtitle-item-team {
+.subtitle-team__item {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
@@ -469,8 +465,8 @@ button {
   overflow: hidden;
 }
 
-.card-content-team {
-  padding: 30px;
+.card-team__content {
+  padding: 30px 32px;
 }
 
 
@@ -490,34 +486,150 @@ button {
     line-height: 1.186;
     text-align: center;
     color: var(--primary-text-color);
+    margin-bottom: 16px;
 }
 
-/* * ========================END SECTION STYLES==================== */
+/* *Social-links // Социальные ссылки */
 
-/* ! =======================END MAIN NAVIGATION===================== */
+.social-links {
+    display: flex;
+    justify-content: space-between;
+}
 
-/* ! ======================FOOTER============================ */
+.social-links__instagram,
+.social-links__twitter,
+.social-links__facebook,
+.social-links__linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    background-color: var(--background-color-white);
+    fill: var(--socials-color);
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+}
+
+.socials:hover {
+    background-color: var(--accent-color);
+    fill: var(--background-color-white);
+}
+
+.socials--dark:hover {
+    background-color: var(--accent-color);
+    fill: var(--background-color-white);
+}
+
+.socials--dark {
+    background-color: var(--socials-color-background-dark);
+    fill: var(--background-color-white);
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+}
+
+.socials__icon {
+    width: 20px;
+    height: 20px;
+}
+
+/** ----------------------------------------- */
+
+/*! SECTION clients // Клиенты */
+/** ----------------------------------------- */
+
+.section-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-clients__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-list__item {
+    width: calc((100% - 150px) / 6);
+}
+
+.clients-section__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    fill: var(--socials-color);
+    border: 1px solid var(--socials-color);
+    border-radius: 4px;
+}
+
+.clients-section__link:hover {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.section-clients__client-1 {
+    width: 44px;
+    height: 49px;
+}
+
+.clients-section__client-2 {
+    width: 40px;
+    height: 50px;
+}
+
+.clients-section__client-3 {
+    width: 41px;
+    height: 42px;
+}
+
+.clients-section__client-4 {
+    width: 80px;
+    height: 42px;
+}
+
+.clients-section__client-5 {
+    width: 59px;
+    height: 47px;
+}
+
+.clients-section__client-6 {
+    width: 88px;
+    height: 45px;
+}
+/** ----------------------------------------- */
+
+/* ! Footer site // Подвал сайта*/
+/** ----------------------------------------- */
+
 .footer {
     background-color: var(--background-color-dark);
-    display: flex;
     padding: 60px 0;
 }
 
 .footer .conteiner {
-   display: flex; 
+    display: flex; 
 }
 
-.footer .logo {
-   margin-bottom: 20px;
+.footer--baseline {
+    display: flex;
 }
-
 .subtitle-footer {
     display: flex;
     align-items: baseline;
 }
 
 .footer-address {
-    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
@@ -525,39 +637,39 @@ button {
 
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color-dark);
 }
 
-.footer-contact-address {
-    color: rgba(255,255,255,1);
+.footer-address__contact{
+    color: #ffffff;
     margin-bottom: 9px;
 }
 
-.footer-contact-email {
+.footer-contact__email {
     margin-bottom: 9px;
 }
 
-.footer-contact-email,
-.footer-contact-tell {
+.footer-contact__email,
+.footer-contact__tell {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.subtitle-item-footer {
+.subscription {
     display: flex;
     flex-direction: column;
+    margin-left: 70px;
+    width: 206px;
 }
 
-.subscription {
+.subscription-title {
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
     text-transform: uppercase;
     color: var(--primary-white-color);
-    margin-left: 70px;
-
 }
-
-/* ! ======================END FOOTER============================ */
-
+/** ----------------------------------------- */
 
 /* ! ========================PORTFOLIO========================= */
 
@@ -566,9 +678,10 @@ button {
     flex-direction: column;
 }
 
-/* * =============PORTFOLIO MENU================= */
+/* ! Portfolio menu // Портфолио меню */
+/** ----------------------------------------- */
 
-.portfolio-subtitle-menu {
+.portfolio-subtitle__menu {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -582,79 +695,20 @@ button {
     justify-content: center;
 }
 
-.portfolio-subtitle-item:not(:last-child) {
+.portfolio-subtitle__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.portfolio-subtitle-item {
+.portfolio-subtitle__item {
     font-family: 'Roboto', sans-serif;
     line-height: 2;
 }
 
-.portfolio-subtitle-item {
+.portfolio-subtitle__item {
     color: var(--title-text-color);
 }
 
-/* * =============PORTFOLIO FILTER================= */
-
-
-.portfolio-subtitle-filter {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.165;
-    letter-spacing: 0.03em;
-    padding-bottom: 94px;
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
-}
-
-.portfolio-subtitle-filter-item {
-    font-family: 'Roboto', sans-serif;
-    line-height: 2;
-
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
-}
-
-.card-filter {
-  box-shadow: var(--card-shadow);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.card-content-filter {
-  padding: 20px;
-}
-
-
-.portfolio-title {
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.06em;
-    color: var(--title-text-color);
-
-    margin-bottom: 4px;
-}
-
-.portfolio-text {
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-
-/* * =============END PORTFOLIO FILTER================= */
-
-/* ! ======================END PORTFOLIO========================= */
-
-/* TODO =========================BUTTON============================= */
-
-.portfolio-button {
+.portfolio__button {
     padding: 6px 22px;
     font-weight: 500;
     font-size: 16px;
@@ -664,5 +718,60 @@ button {
     color: var(--title-text-color);
     background-color: var(--portfolio-button-background-color);
 }
+/** ----------------------------------------- */
 
-/* TODO =========================END BUTTON============================= */
+/* ! Portfolio filter // Портфолио фильтер */
+/** ----------------------------------------- */
+
+.portfolio-subtitle__filter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.165;
+    letter-spacing: 0.03em;
+    padding-bottom: 94px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.portfolio-subtitle-filter__item {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+}
+
+.card-filter {
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-content__filter {
+    padding: 20px;
+}
+
+
+.portfolio__title {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
+    margin-bottom: 4px;
+}
+
+.portfolio__text {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+.card-filter:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--primary-text-color);
+}
+/** ----------------------------------------- */
